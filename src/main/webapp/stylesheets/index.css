@@ -1,0 +1,86 @@
+@import
+	url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap")
+	;
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	/* background: linear-gradient(to top, #e6c2fb 0%, #a6c1ee 100%) no-repeat center center fixed; */
+	background: linear-gradient(to top, #09203f 0%, #537895 100%) no-repeat
+		center center fixed;
+}
+body::-webkit-scrollbar{
+	display: none;
+}
+
+.navbar {
+	z-index: 999;
+	border-bottom: 2px solid rgb(103, 102, 102);
+	box-shadow: 0 0 12px rgb(70, 70, 70);
+	position: fixed;
+	min-width: 100%;
+	top: 0;
+	left: 0;
+}
+.navbar a {
+    text-decoration: none;
+}
+.navbar-brand img {
+	border-radius: 100%;
+	box-shadow: 0 0 2px black;
+}
+
+.nav-link {
+	font-weight: bolder;
+	color: rgb(255, 255, 255);
+	margin: 0;
+	padding: 0;
+	font-size: 21px;
+}
+
+.navbar ul {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.navbar li {
+	margin: 10px;
+}
+.loginlink{
+	text-decoration:none;
+}
+.navbar button {
+	text-decoration:none;
+	margin: 0;
+	margin-right: 2%;
+	padding: 12px 34px;
+	border-radius: 42px;
+}
+
+.bg-dark {
+	background-color: transparent;
+	background-image: linear-gradient(to right, #35213e 0%, rgb(15, 22, 50)
+		100%);
+}
+
+.card {
+	max-width: 40vw;
+	margin: auto;
+}
+
+.carousel {
+	max-width: 90vw;
+	margin: auto;
+	margin-top: 10px;
+	border: 2px solid white;
+	border-radius: 12px;
+}
+
+.carousel img {
+	border-radius: 12px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<head>
+<link rel="stylesheet" href="./stylesheets/home.css" />
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+<body>
+
+<ui:decorate template="index.xhtml">
+<ui:define name="firstcontent">
+	
+<div class="home">
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <img class="floating" src="./assets/air.svg" />
+    </div>
+    <div class="col">
+      <div class="welcomenote">
+        <h1><span class="welcometext" >Welcome to</span> <br/>
+        	<span class = "titlea" >A</span>urora <span class = "titlea" >A</span>viation<br/>
+        	<span id="element"></span>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+    var typed = new Typed('#element', {
+      strings: ['Fast Bookings', 'Quick refunds!', 'Reliable', 'Heavy discounts', 'Top Flights!'],
+      typeSpeed: 50,
+    });
+</script>
+  
+</ui:define>
+</ui:decorate>
+</body>
+</html>
