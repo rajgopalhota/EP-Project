@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
 
 <head>
 <link rel="stylesheet" href="./stylesheets/login.css" />
@@ -21,48 +22,48 @@
                 </div>
 
                 <div class="login__forms">
-                    <form action="" class="login__registre" id="login-in">
+                    <h:form action="" class="login__registre" id="login-in">
                         <h1 class="login__title">Sign In</h1>
     
                         <div class="login__box">
                             <i class='bx bx-user login__icon'></i>
-                            <input type="text" placeholder="Username" class="login__input" />
+                            <h:inputText type="text" pt:placeholder="Username" value="#{login.user}" class="login__input" />
                         </div>
     
                         <div class="login__box">
                             <i class='bx bx-lock-alt login__icon'></i>
-                            <input type="password" placeholder="Password" class="login__input" />
+                            <h:inputSecret type="password" pt:placeholder="Password" value="#{login.pwd}" class="login__input" />
                         </div>
 
                         <a href="#" class="login__forgot">Forgot password?</a>
 
-                        <a href="#" class="login__button">Sign In</a>
+                        <h:commandLink class="login__button" action="#{login.validateUsernamePassword()}" value="">Sign In</h:commandLink>
 
                         <div>
                             <span class="login__account">Don't have an Account ?</span>
                             <span class="login__signin" id="sign-up">Sign Up</span>
                         </div>
-                    </form>
+                    </h:form>
 
-                    <form action="" class="login__create none" id="login-up">
+                    <h:form action="" class="login__create none" id="login-up">
                         <h1 class="login__title">Create Account</h1>
     
                         <div class="login__box">
                             <i class='bx bx-user login__icon'></i>
-                            <input type="text" placeholder="Username" class="login__input" />
+                            <h:inputText type="text" pt:placeholder="Username" name="username" class="login__input" value="#{register.username}" />
                         </div>
     
                         <div class="login__box">
                             <i class='bx bx-at login__icon'></i>
-                            <input type="text" placeholder="Email" class="login__input" />
+                            <h:inputText type="text" pt:placeholder="Email" name="email" value="#{register.email}" class="login__input" />
                         </div>
 
                         <div class="login__box">
                             <i class='bx bx-lock-alt login__icon'></i>
-                            <input type="password" placeholder="Password" class="login__input" />
+                            <h:inputSecret type="password" pt:placeholder="Password" name="pass" value="#{register.pass}" class="login__input" />
                         </div>
 
-                        <a href="#" class="login__button">Sign Up</a>
+                        <h:commandLink action="#{register.insert()}" class="login__button" value="Sign Up" />
 
                         <div>
                             <span class="login__account">Already have an Account ?</span>
@@ -74,7 +75,7 @@
                             <a href="#" class="login__social-icon"><i class='bx bxl-twitter' ></i></a>
                             <a href="#" class="login__social-icon"><i class='bx bxl-google' ></i></a>
                         </div>
-                    </form>
+                    </h:form>
                 </div>
             </div>
         </div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#login.jsf" PATH="/login.jsf"
+  SHAPE="256,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#login.jsf:0" NAME="item" PATH="/login.jsf" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="home::#home.jsf" NAME="output"
+    PATH="/home.jsf" TARGET="rules:#home.jsf" TITLE="home" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#home.jsf" PATH="/home.jsf"
+  SHAPE="448,17,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>
