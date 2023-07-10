@@ -1,15 +1,19 @@
 article {
   --img-scale: 1.001;
-  --title-color: black;
+  --title-color: rgb(255, 255, 255);
   --link-icon-translate: -20px;
   --link-icon-opacity: 0;
+  color: rgb(255, 242, 242);
   position: relative;
   border-radius: 16px;
   box-shadow: none;
-  background: #fff;
+  background-image: linear-gradient(120deg, #7bffb02f 0%, #c2e9fb27 100%);
+  backdrop-filter: blur(4px);
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
+  border: 1px solid white;
+  box-shadow: 0 0 8px black;
 }
 
 article a::after {
@@ -23,10 +27,11 @@ article a::after {
 /* basic article elements styling */
 article h2 {
   margin: 0 0 18px 0;
-  font-family: "Bebas Neue", cursive;
   font-size: 1.9rem;
   letter-spacing: 0.06em;
   color: var(--title-color);
+  text-shadow: 0 0 8px black;
+  font-weight: 700;
   transition: color 0.3s ease-out;
 }
 
@@ -52,11 +57,11 @@ article a {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #28666e;
+  color: #d4faff;
 }
 
 article a:focus {
-  outline: 1px dotted #28666e;
+  outline: 1px dotted #fff7d8;
 }
 
 article a .icon {
@@ -72,32 +77,12 @@ article a .icon {
 /* using the has() relational pseudo selector to update our custom properties */
 article:has(:hover, :focus) {
   --img-scale: 1.1;
-  --title-color: #28666e;
+  --title-color: #e3fcff;
   --link-icon-translate: 0;
   --link-icon-opacity: 1;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-
-/************************ 
-Generic layout (demo looks)
-**************************/
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 48px 0;
-  font-family: "Figtree", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-  background-image: linear-gradient(45deg, #7c9885, #b5b682);
-  min-height: 100vh;
-}
 
 .articles {
   display: grid;
@@ -105,6 +90,7 @@ body {
   margin-inline: auto;
   padding-inline: 24px;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  margin-top: 10%;
   gap: 24px;
 }
 

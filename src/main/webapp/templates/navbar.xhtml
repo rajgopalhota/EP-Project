@@ -2,7 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:c="http://java.sun.com/jsp/jstl/core"
+    xmlns:cc="http://java.sun.com/jsf/composite">
 
 <head>
 <link rel="stylesheet" href="./stylesheets/index.css" />
@@ -37,7 +39,7 @@
 					href="#">My Data</a></li>
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" role="button"
-					data-bs-toggle="dropdown" aria-expanded="false"> Dropdown </a>
+					data-bs-toggle="dropdown" aria-expanded="false"> #{login.username} </a>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="#">Action</a></li>
 						<li><a class="dropdown-item" href="#">Another action</a></li>
@@ -45,7 +47,6 @@
 						<li><a class="dropdown-item" href="#">Something else here</a></li>
 					</ul></li>
 			</ul>
-
 			<h:commandLink action = "login"><button class="d-flex btn btn-danger">LOGIN</button></h:commandLink>
 		</div>
 	</div>
