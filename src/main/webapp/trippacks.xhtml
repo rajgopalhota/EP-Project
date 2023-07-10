@@ -1,68 +1,136 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
-
-<head>
-<link rel="stylesheet" href="./stylesheets/package.css" />
-</head>
-<body>
-
-	<ui:decorate template="index.xhtml">
-		<ui:define name="firstcontent">
-		<div class="packages">
-
-			<div class="container text-center">
-				<h2>Trending Packages</h2>
-				<div class="row row-cols-auto">
-					<div class="col">
-						<figure> <img src="https://picsum.photos/id/287/250/300"
-							alt="Mountains" /> <figcaption>The Day</figcaption> </figure>
-					</div>
-					<div class="col">
-						<figure style="--c:#fff5"> <img
-							src="https://picsum.photos/id/475/250/300" alt="Mountains" /> <figcaption>The
-						Night</figcaption> </figure>
-					</div>
-					<div class="col">
-						<figure> <img src="https://picsum.photos/id/287/250/300"
-							alt="Mountains" /> <figcaption>The Day</figcaption> </figure>
-					</div>
-					<div class="col">
-						<figure style="--c:#fff5"> <img
-							src="https://picsum.photos/id/475/250/300" alt="Mountains" /> <figcaption>The
-						Night</figcaption> </figure>
-					</div>
-				</div>
-			</div>
-			
-			
-			<div class="container text-center">
-				<h2>Affordable Packages</h2>
-				<div class="row row-cols-auto">
-					<div class="col">
-						<figure> <img src="https://picsum.photos/id/287/250/300"
-							alt="Mountains" /> <figcaption>The Day</figcaption> </figure>
-					</div>
-					<div class="col">
-						<figure style="--c:#fff5"> <img
-							src="https://picsum.photos/id/475/250/300" alt="Mountains" /> <figcaption>The
-						Night</figcaption> </figure>
-					</div>
-					<div class="col">
-						<figure> <img src="https://picsum.photos/id/287/250/300"
-							alt="Mountains" /> <figcaption>The Day</figcaption> </figure>
-					</div>
-					<div class="col">
-						<figure style="--c:#fff5"> <img
-							src="https://picsum.photos/id/475/250/300" alt="Mountains" /> <figcaption>The
-						Night</figcaption> </figure>
-					</div>
-				</div>
-			</div>
-</div>
-		</ui:define>
-	</ui:decorate>
-</body>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+>
+  <head>
+    <link rel="stylesheet" href="./stylesheets/package.css" />
+  </head>
+  <body>
+    <ui:decorate template="index.xhtml">
+      <ui:define name="firstcontent">
+        <section class="articles">
+            <div class="row">
+              <!-- One card -->
+              <div class="col">
+                <article>
+                  <div class="article-wrapper">
+                    <figure>
+                      <img src="https://picsum.photos/id/1011/800/450" alt="" />
+                    </figure>
+                    <div class="article-body">
+                      <h2>This is some title</h2>
+                      <p>
+                        Curabitur convallis ac quam vitae laoreet. Nulla mauris
+                        ante, euismod sed lacus sit amet, congue bibendum eros.
+                        Etiam mattis lobortis porta. Vestibulum ultrices iaculis
+                        enim imperdiet egestas.
+                      </p>
+                      <a href="#" class="read-more">
+                        Large modal<span class="sr-only"
+                          >about this is some title</span
+                        >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <!-- One card -->
+            </div>
+            <div class="row">
+              <!-- One card -->
+              <div class="col">
+                <article>
+                  <div class="article-wrapper">
+                    <figure>
+                      <img src="https://picsum.photos/id/1011/800/450" alt="" />
+                    </figure>
+                    <div class="article-body">
+                      <h2>This is some title</h2>
+                      <p>
+                        Curabitur convallis ac quam vitae laoreet. Nulla mauris
+                        ante, euismod sed lacus sit amet, congue bibendum eros.
+                        Etiam mattis lobortis porta. Vestibulum ultrices iaculis
+                        enim imperdiet egestas.
+                      </p>
+                      <a href="#" class="read-more">
+                        Large modal<span class="sr-only"
+                          >about this is some title</span
+                        >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <!-- One card -->
+            </div>
+            <div class="row">
+              <!-- One card -->
+              <div class="col">
+                <article>
+                  <div class="article-wrapper">
+                    <figure>
+                      <img src="https://picsum.photos/id/1011/800/450" alt="" />
+                    </figure>
+                    <div class="article-body">
+                      <h2>This is some title</h2>
+                      <p>
+                        Curabitur convallis ac quam vitae laoreet. Nulla mauris
+                        ante, euismod sed lacus sit amet, congue bibendum eros.
+                        Etiam mattis lobortis porta. Vestibulum ultrices iaculis
+                        enim imperdiet egestas.
+                      </p>
+                      <a href="#" class="read-more">
+                        Large modal<span class="sr-only"
+                          >about this is some title</span
+                        >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <!-- One card -->
+            </div>
+        </section>
+      </ui:define>
+    </ui:decorate>
+  </body>
 </html>
