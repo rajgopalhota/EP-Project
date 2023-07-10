@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @WebFilter(filterName = "AuthFilter", urlPatterns = { "*.xhtml" })
-public class AuthorizationFilter implements Filter {
+public class AuthorizationFilter implements Filter{
 
 	public AuthorizationFilter() {
 	}
@@ -39,7 +39,7 @@ public class AuthorizationFilter implements Filter {
 					|| reqURI.contains("javax.faces.resource"))
 				chain.doFilter(request, response);
 			else
-				resp.sendRedirect(reqt.getContextPath() + "/faces/login.xhtml");
+				resp.sendRedirect(reqt.getContextPath() + "login.xhtml");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -49,4 +49,5 @@ public class AuthorizationFilter implements Filter {
 	public void destroy() {
 
 	}
+
 }

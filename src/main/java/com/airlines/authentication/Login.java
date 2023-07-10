@@ -1,68 +1,59 @@
 package com.airlines.authentication;
 
-import java.io.Serializable;
+import java.io.*;
 
-import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
+import javax.faces.application.FacesMessage;
 
-
-@ManagedBean
+@ManagedBean(name = "login", eager = true)
 @SessionScoped
-@RequestScoped
 public class Login implements Serializable {
 
 	private static final long serialVersionUID = 1094801825228386363L;
+	private String username;
+	private String password;
+	private String message;
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
 	
-	private String pwd;
-	private String msg;
-	private String user;
-
-	public String getPwd() {
-		return pwd;
-	}
-
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
-	}
-
-	public String getMsg() {
-		return msg;
-	}
-
-	public void setMsg(String msg) {
-		this.msg = msg;
-	}
-
-	public String getUser() {
-		return user;
-	}
-
-	public void setUser(String user) {
-		this.user = user;
-	}
-
-	//validate login
+	
 	public String validateUsernamePassword() {
-		boolean valid = LoginDAO.validate(user, pwd);
+		boolean valid = LoginDAO.validate(username, password);
 		if (valid) {
 			HttpSession session = SessionUtils.getSession();
-			session.setAttribute("username", user);
+			session.setAttribute("username", username);
+			 FacesContext context = FacesContext.getCurrentInstance();
+		        context.addMessage(null, new FacesMessage("You have logged in successfully", "You have successfully registered and logged in"));
 			return "home";
+			
 		} else {
-			FacesContext.getCurrentInstance().addMessage(
-					null,
-					new FacesMessage(FacesMessage.SEVERITY_WARN,
-							"Incorrect Username and Passowrd",
-							"Please enter correct username and Password"));
+			FacesContext context = FacesContext.getCurrentInstance();
+			context.addMessage(null,new FacesMessage("Incorrect Username and Passowrd","Please enter correct username and Password"));
 			return "login";
 		}
+		
+		
 	}
-
-	//logout event, invalidate session
+	
 	public String logout() {
 		HttpSession session = SessionUtils.getSession();
 		session.invalidate();

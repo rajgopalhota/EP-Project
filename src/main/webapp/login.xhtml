@@ -27,12 +27,14 @@
     
                         <div class="login__box">
                             <i class='bx bx-user login__icon'></i>
-                            <h:inputText type="text" pt:placeholder="Username" value="#{login.user}" class="login__input" />
+                            <h:inputText type="text" pt:placeholder="Username" name="username"
+										value="#{login.username}" id="username" class="login__input" />
                         </div>
     
                         <div class="login__box">
                             <i class='bx bx-lock-alt login__icon'></i>
-                            <h:inputSecret type="password" pt:placeholder="Password" value="#{login.pwd}" class="login__input" />
+                            <h:inputSecret type="password" pt:placeholder="Password" name="password"
+										value="#{login.password}" id="password" class="login__input" />
                         </div>
 
                         <a href="#" class="login__forgot">Forgot password?</a>

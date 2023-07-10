@@ -1,23 +1,17 @@
 package com.airlines.authentication;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
-import javax.faces.bean.RequestScoped;
 
-@RequestScoped
 public class LoginDAO {
-
-	public static boolean validate(String user, String password) {
+	public static boolean validate(String username, String password) {
 		Connection con = null;
 		PreparedStatement ps = null;
 
 		try {
 			con = DataConnect.getConnection();
 			ps = con.prepareStatement("select * from register where username = ? and password = ?");
-			ps.setString(1, user);
+			ps.setString(1, username);
 			ps.setString(2, password);
 
 			ResultSet rs = ps.executeQuery();
