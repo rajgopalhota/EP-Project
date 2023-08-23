@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+     xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      >
+      
+<head>
+	<title>Booking</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet"/>
+
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<link type="text/css" rel="stylesheet" href="./stylesheets/flight.css" />
+</head>
+<body>
+<ui:decorate template="index.xhtml">
+<ui:define name="firstcontent">
+	<div id="booking" class="section floating">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<h:form>
+							<div class="form-group">
+								<div class="form-checkbox">
+									<label for="roundtrip">
+										<input type="radio" id="roundtrip" name="flight-type"/>
+										<span></span>Roundtrip
+									</label>
+									<label for="one-way">
+										<input type="radio" id="one-way" name="flight-type"></input>
+										<span></span>One way
+									</label>
+									<label for="multi-city">
+										<input type="radio" id="multi-city" name="flight-type"></input>
+										<span></span>Multi-City
+									</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Flying from</span>
+										<h:inputText class="form-control" type="text" value="#{flight.source}" placeholder="City or airport" name="source" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Flying to</span>
+										<h:inputText class="form-control" type="text" placeholder="City or airport" value="#{flight.dest}" name="dest"></h:inputText>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Departing</span>
+ 											<input class="form-control" type="date" ></input>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Returning</span>
+										<input class="form-control" type="date" ></input>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<span class="form-label" >Adults (18+)</span>
+										<h:selectOneMenu class="form-control" value="#{flight.adults}" name="adults">
+											<f:selectItem itemValue="0" >0</f:selectItem>
+											<f:selectItem itemValue="1">1</f:selectItem>
+											<f:selectItem itemValue="2">2</f:selectItem>
+										</h:selectOneMenu>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<span class="form-label">Children (0-17)</span>
+										<h:selectOneMenu class="form-control" value="#{flight.child}" name="child">
+											<f:selectItem itemValue="0">0</f:selectItem>
+											<f:selectItem itemValue="1">1</f:selectItem>
+											<f:selectItem itemValue="2">2</f:selectItem>
+										</h:selectOneMenu>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Travel class</span>
+										<h:selectOneMenu class="form-control" value="#{flight.econ}" name="econ">
+											<f:selectItem itemValue="Economy Class">Economy class</f:selectItem>
+											<f:selectItem itemValue="Business Class">Business class</f:selectItem>
+											<f:selectItem itemValue="First class">First class</f:selectItem>
+										</h:selectOneMenu>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-btn">
+									<h:commandButton class="submit-btn" action="#{flight.insert()}" value="Book Flight">Book flight</h:commandButton>  
+									</div>
+								</div>
+							</div>
+						</h:form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</ui:define>
+</ui:decorate>
+</body>
+
+</html>
+	

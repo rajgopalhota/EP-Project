@@ -1,0 +1,88 @@
+<html xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+<title>Booking History</title>
+<style>
+.form-tender form {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 8px 32px rgba(31, 38, 135, 0.37);
+}
+.form-tender b {
+  color: white;
+  
+}
+.tenderh1  {
+margin-top:2.5%;
+color:white;
+font-family: "Lucida Console", "Courier New";
+  margin-bottom: 1.5%;
+  text-align:center;
+}
+.form-tender table {
+  border-color: white;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 8%;
+  border: 4px;
+border-color: rgba(241, 13, 211, 0.582);
+	border-style: solid;
+
+}
+.form-tender th, td {
+  text-align: center;
+  padding: 8px;
+}
+.form-tender th{
+ 	background-color: rgb(237, 161, 19);
+}
+.form-tender tr:nth-child(even) {
+  background-color: black;
+  color:white;
+}
+.form-tender tr:nth-child(odd) {
+  background-color: white;
+  color:black;
+}
+</style>
+</head>
+<body>
+<ui:decorate template="index.xhtml">
+    <ui:define name="firstcontent">
+<div class="tenderh1">
+<h1 >Booking History</h1>
+</div>
+  <h:form class="form-tender">
+    <h:dataTable var="r" value="#{flight.list}">
+      <h:column>
+        <f:facet name="header">
+  Source</f:facet>
+  #{r.source}
+  </h:column>
+      <h:column>
+        <f:facet name="header">
+  Destination</f:facet>
+  #{r.dest}</h:column>
+      <h:column>
+        <f:facet name="header">Date</f:facet>#{r.date}</h:column>
+<h:column>
+        <f:facet name="header">
+  Adults</f:facet>
+  #{r.adults}</h:column> 
+  <h:column>
+        <f:facet name="header">
+  Childs</f:facet>
+  #{r.child}</h:column>
+  <h:column>
+        <f:facet name="header">
+  Travel Class</f:facet>
+  #{r.econ}</h:column>     
+    </h:dataTable>
+  </h:form>
+</ui:define>
+  </ui:decorate>
+</body>
+</html>

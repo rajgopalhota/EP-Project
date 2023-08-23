@@ -1,12 +1,9 @@
 package com.airlines.signupcontroller;
-
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-
 import com.airlines.signupbean.RegisterUserBean;
 import com.airlines.signupentity.RegisterUser;
-
 @ManagedBean(name = "register", eager = true)
 @RequestScoped
 public class RegisterUserData {
@@ -38,8 +35,6 @@ public class RegisterUserData {
 	public void setResMsg(String resMsg) {
 		this.resMsg = resMsg;
 	}
-	
-	
 //	Lookups
 	@EJB(lookup = "java:global/EP-Project/RegisterUserBeanImpl!com.airlines.signupbean.RegisterUserBean")
 	  private RegisterUserBean eb;

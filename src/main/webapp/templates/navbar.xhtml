@@ -5,7 +5,6 @@
 	xmlns:h="http://java.sun.com/jsf/html"
     xmlns:c="http://java.sun.com/jsp/jstl/core"
     xmlns:cc="http://java.sun.com/jsf/composite">
-
 <head>
 <link rel="stylesheet" href="./stylesheets/index.css" />
 <link rel="stylesheet" href="./stylesheets/background.css" />
@@ -18,7 +17,7 @@
 		data-bs-theme="dark">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="#"><img src="./assets/logo.gif"
-			width="70" /></a>
+			width="40" /></a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 			data-bs-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -30,11 +29,11 @@
 				<li class="nav-item"><h:commandLink class="nav-link" aria-current="page"
 					action="home">Home</h:commandLink></li>
 				<li class="nav-item"><h:commandLink class="nav-link" aria-current="page"
+					action="flight">Flight</h:commandLink></li>
+				<li class="nav-item"><h:commandLink class="nav-link" aria-current="page"
 					action="trippacks">Packages</h:commandLink></li>
-				<li class="nav-item"><a class="nav-link" aria-current="page"
-					href="#">History</a></li>
-				<li class="nav-item"><a class="nav-link" aria-current="page"
-					href="#">Travels</a></li>
+				<li class="nav-item"><h:commandLink class="nav-link" aria-current="page"
+					action="history">History</h:commandLink></li>
 				<li class="nav-item"><a class="nav-link" aria-current="page"
 					href="#">My Data</a></li>
 				<li class="nav-item dropdown"><a

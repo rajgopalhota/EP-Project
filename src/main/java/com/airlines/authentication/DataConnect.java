@@ -7,7 +7,7 @@ public class DataConnect {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/klu", "root", "2003");
+					"jdbc:mysql://localhost:3306/klu", "root", "rakesh");
 			return con;
 		} catch (Exception ex) {
 			System.out.println("Database.getConnection() Error -->"

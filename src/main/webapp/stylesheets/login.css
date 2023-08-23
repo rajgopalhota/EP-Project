@@ -31,7 +31,6 @@ img{
 
 /*===== LOGIN =====*/
 .login{
-	margin-top: 3%;
   display: grid;
   grid-template-columns: 100%;
   height: 100vh;

@@ -3,5 +3,6 @@
 	<persistence-unit name="EP-Project">
 		<jta-data-source>java:/MySqlDS</jta-data-source>
 		<class>com.airlines.signupentity.RegisterUser</class>
+		<class>com.airlines.flightentity.Flight</class>
 	</persistence-unit>
 </persistence>

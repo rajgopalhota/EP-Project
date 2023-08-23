@@ -22,7 +22,6 @@ body::-webkit-scrollbar{
 	z-index: 999;
 	border-bottom: 2px solid rgb(103, 102, 102);
 	box-shadow: 0 0 12px rgb(70, 70, 70);
-	position: fixed;
 	min-width: 100%;
 	top: 0;
 	left: 0;

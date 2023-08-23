@@ -4,17 +4,13 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
-
 <head>
 <link rel="stylesheet" href="./stylesheets/login.css" />
 <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet' />
 </head>
 <body>
-
 <ui:decorate template="index.xhtml">
-
 <ui:define name="firstcontent">
-
 <div class="login">
             <div class="login__content">
                 <div class="login__img">
@@ -33,7 +29,7 @@
     
                         <div class="login__box">
                             <i class='bx bx-lock-alt login__icon'></i>
-                            <h:inputSecret type="password" pt:placeholder="Password" name="password"
+                            <h:inputSecret type="password" pt:placeholder="Password" name="password" min="8"
 										value="#{login.password}" id="password" class="login__input" />
                         </div>
 
@@ -81,15 +77,9 @@
                 </div>
             </div>
         </div>
-
         <!--===== MAIN JS =====-->
         <script src="./scripts/login.js"></script>
-
 </ui:define>
-
-
 </ui:decorate>
-
 </body>
-
 </html>

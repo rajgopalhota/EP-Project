@@ -4,7 +4,6 @@ import javax.ejb.Stateless;
 import javax.persistence.*;
 
 import com.airlines.signupentity.RegisterUser;
-
 @Stateless
 public class RegisterUserBeanImpl implements RegisterUserBean{
 	@Override
@@ -16,7 +15,6 @@ public class RegisterUserBeanImpl implements RegisterUserBean{
 	    em.getTransaction().commit();
 	    em.close();
 	    emf.close();
-
 	    return "signupsuccessfully";
 	  }
 }
